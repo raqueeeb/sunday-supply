@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Thoughtful things for slower mornings and softer landings. Discover everyday essentials at Sunday Supply."
+    />
+    <meta name="theme-color" content="#f7f6f2" />
+    <title>Sunday Supply — Make room for slow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">
+      A little something extra: free shipping on orders over $75
+    </div>
+    <header class="site-header">
+      <a class="wordmark" href="#" aria-label="Sunday Supply home">
+        sunday<span class="wordmark-dot">.</span>
+        <span class="wordmark-subtitle">SUPPLY CO.</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#shop">Shop all</a>
+        <a href="#shop" data-nav-category="Home">Home goods</a>
+        <a href="#shop" data-nav-category="Wellness">Wellness</a>
+        <a href="#story">Our story</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button search-toggle" aria-label="Search products">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.5 4.5"></path></svg>
+        </button>
+        <button class="cart-button" id="open-cart" aria-label="Open shopping bag">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 12H4L5 8Z"></path><path d="M9 9V6a3 3 0 0 1 6 0v3"></path></svg>
+          <span class="cart-label">Bag</span>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+        <button class="icon-button menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=85"
+          alt="A warm, sunlit living room with soft natural textures"
+        />
+        <div class="hero-content">
+          <span class="eyebrow hero-eyebrow"><span></span> A softer kind of everyday</span>
+          <h1 id="hero-title">Make room<br />for <em>slow.</em></h1>
+          <p>Thoughtful things for slower mornings, softer landings, and all the in-between.</p>
+          <a class="button button-dark" href="#shop">Find your everyday <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-note"><span>01 / 03</span> THE SUNDAY EDIT</div>
+      </section>
+
+      <section class="trust-strip" aria-label="Our promises">
+        <p><span>✳</span> Made to be lived in</p>
+        <p><span>✳</span> Thoughtfully sourced</p>
+        <p><span>✳</span> A little less, a lot better</p>
+        <p><span>✳</span> Free shipping over $75</p>
+      </section>
+
+      <section class="shop-section section-wrap" id="shop">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Good things, gathered</span>
+            <h2>Everyday <em>favourites.</em></h2>
+          </div>
+          <a class="text-link desktop-shop-link" href="#shop">Shop the collection <span>↗</span></a>
+        </div>
+        <div class="shop-toolbar">
+          <div class="category-list" role="group" aria-label="Filter products by category">
+            <button class="category-chip active" data-category="All">All things</button>
+            <button class="category-chip" data-category="Home">Home</button>
+            <button class="category-chip" data-category="Wellness">Wellness</button>
+            <button class="category-chip" data-category="Accessories">Accessories</button>
+          </div>
+          <div class="shop-tools">
+            <label class="search-field" id="search-field">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.5 4.5"></path></svg>
+              <input id="product-search" type="search" placeholder="Find something..." aria-label="Search products" />
+            </label>
+            <label class="sort-label" for="sort-products">Sort</label>
+            <select id="sort-products" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+              <option value="rating">Top rated</option>
+            </select>
+          </div>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>No little lovelies found. Try another search.</p>
+        <div class="mobile-shop-link"><a class="text-link" href="#shop">Shop all the good things <span>↗</span></a></div>
+      </section>
+
+      <section class="story-section" id="story">
+        <div class="story-photo">
+          <img
+            src="https://images.unsplash.com/photo-1600210491369-e753d80a41f3?auto=format&fit=crop&w=1100&q=85"
+            alt="A cozy corner styled with natural fabrics and warm wood"
+            loading="lazy"
+          />
+          <span class="photo-caption">A HOME THAT FEELS LIKE YOU</span>
+        </div>
+        <div class="story-copy">
+          <span class="eyebrow">Less rush, more ritual</span>
+          <h2>Little things<br />make a <em>life.</em></h2>
+          <p>We believe the best parts of a day aren't the big, shiny moments. They're the first sip of coffee, the candle you light at dusk, the blanket that's always yours.</p>
+          <p>So we find the lovely, useful things that make ordinary days feel a little more like something.</p>
+          <a class="button button-outline" href="#shop">A little about us <span aria-hidden="true">↗</span></a>
+          <span class="story-doodle" aria-hidden="true">✳</span>
+        </div>
+      </section>
+
+      <section class="newsletter">
+        <div class="newsletter-mark" aria-hidden="true">s.</div>
+        <span class="eyebrow">A note from us to you</span>
+        <h2>Good things, <em>in your inbox.</em></h2>
+        <p>New finds, slow-living notes, and 10% off your first order. No noise, promise.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <label class="sr-only" for="newsletter-email">Your email address</label>
+          <input id="newsletter-email" type="email" placeholder="Your email address" required />
+          <button type="submit" aria-label="Subscribe to newsletter">Count me in <span>↗</span></button>
+        </form>
+        <p class="newsletter-message" id="newsletter-message" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="wordmark footer-wordmark" href="#">sunday<span class="wordmark-dot">.</span><span class="wordmark-subtitle">SUPPLY CO.</span></a>
+          <p>For the days that feel like Sundays.</p>
+        </div>
+        <div class="footer-column"><span class="footer-heading">The good stuff</span><a href="#shop">Shop all</a><a href="#shop">New arrivals</a><a href="#shop">Best sellers</a></div>
+        <div class="footer-column"><span class="footer-heading">Here to help</span><a href="mailto:hello@sundaysupply.example">Get in touch</a><a href="#story">Shipping & returns</a><a href="#story">FAQs</a></div>
+        <div class="footer-social"><span class="footer-heading">Come say hi</span><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram ↗</a><a href="https://pinterest.com" target="_blank" rel="noreferrer">Pinterest ↗</a></div>
+      </div>
+      <div class="footer-bottom"><span>© 2025 Sunday Supply Co.</span><span>Made for slower days, wherever you are.</span><span>Privacy &nbsp; · &nbsp; Terms</span></div>
+    </footer>
+
+    <div class="overlay" id="overlay" hidden></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
+      <div class="drawer-header">
+        <div><span class="eyebrow">The good things</span><h2>Your bag <span id="drawer-count">(0)</span></h2></div>
+        <button class="icon-button close-cart" id="close-cart" aria-label="Close shopping bag"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"></path></svg></button>
+      </div>
+      <div class="shipping-progress" id="shipping-progress"></div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-empty" id="cart-empty"><span aria-hidden="true">✳</span><h3>Nothing in here just yet.</h3><p>Your next favourite thing is out there.</p><button class="button button-dark" id="continue-shopping">Keep looking</button></div>
+      <div class="cart-footer" id="cart-footer">
+        <div class="subtotal-row"><span>Subtotal</span><strong id="cart-subtotal">$0.00</strong></div>
+        <p>Shipping and any applicable taxes are calculated at checkout.</p>
+        <button class="button button-dark checkout-button" id="checkout-button">Continue to checkout <span aria-hidden="true">↗</span></button>
+        <button class="continue-link" id="continue-shopping-footer">Keep on browsing</button>
+      </div>
+    </aside>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
